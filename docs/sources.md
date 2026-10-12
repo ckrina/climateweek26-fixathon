@@ -33,10 +33,18 @@ Every number or claim in the product or the pitch needs a source here. If it isn
   - **Notes:** home of the Taxonomy Compass (activities, objectives, criteria; Excel and JSON downloads), the calculator, FAQs and user guide.
 - [Taxonomy Regulation (EU) 2020/852](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852), EUR-Lex
   - **Notes:** the legal basis, including the four conditions for an activity to be environmentally sustainable.
+- Taxonomy Regulation implementing and delegated acts, European Commission
+  - **Notes:** where the technical screening criteria live. Link to add; record version and effective date.
 
-## Green bonds
+## Green and blue finance
 
 - [The European green bond standard](https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/european-green-bond-standard-supporting-transition_en), European Commission
+- Regulation (EU) 2023/2631 on European Green Bonds, EUR-Lex
+  - **Notes:** the legal basis for the EU green bond label. Link to add.
+- ICMA Green Bond Principles, June 2025
+  - **Notes:** the voluntary market standard most green bonds follow. Link to add.
+- IFC Guidelines for Blue Finance, Version 2.0
+  - **Notes:** reference for the blue economy sector (water and ocean). Link to add.
 
 ## Finance match (banks and programs)
 
