@@ -69,7 +69,7 @@ It is navigation and pre-screening. It is not legal advice, investment advice or
 
 - `CLAUDE.md`: this file.
 - `decisions.md`: running log of decisions. Check it before starting work and update it when something changes.
-- `/docs`: concept, onboarding questions, Ekaterina's one-pager and four-pager, Norrsken challenge brief, `sources.md`.
+- `/docs`: concept, onboarding questions, Ekaterina's one-pager and four-pager, Norrsken challenge brief, `sources.md`, `design-system.md` (style, type, colors, tokens; follow it for any UI work).
 - `/data/taxonomy`: Taxonomy activities and criteria (three sectors).
 - `/data/finance`: banks and green lending programs.
 - `/data/grants`: EU funding calls and links.
