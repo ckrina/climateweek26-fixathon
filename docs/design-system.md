@@ -101,19 +101,39 @@ The Compass color-codes rows by sector. Approximate values, eyeballed from scree
 
 Links are dark blue (around `#0B4C9C`), sector labels dark gray bold, rows separated by thin gray lines.
 
-We don't copy them as-is: some are very saturated, dark blue links on the blue and green rows have poor contrast, and Energy's pink reads as "error". Our version for the three sectors:
+We don't copy them as-is: some are very saturated, dark blue links on the blue and green rows have poor contrast, and Energy's pink reads as "error".
 
-| Our sector | Pastel | Ink | Based on |
-|---|---|---|---|
-| Energy transition | `#F6E3D3` peach | `#7A4A1E` | Energy (shifted away from pink) |
-| Blue economy (water) | `#DFEEF1` | `#1E6A70` | Water supply |
-| Bioeconomy / biomass | `#D3EDCB` | `#2F6B2A` | Forestry, softened |
+### Nexus pillars
 
-Use them as a chip or a 4px left bar on a row, not as a full row fill.
+Aligned with the team's diagrams (colors eyeballed from screenshots):
+
+| Pillar | Impact card | Background | Border | Icon / ink | Pillar icon | Impact icon |
+|---|---|---|---|---|---|---|
+| Blue Economy (water) | Water | `#E8F0FA` | `#A9C4E8` | `#2F6FC9` | `waves` | `droplets` |
+| Green Economy (energy) | Carbon | `#E7F0EB` | `#A8CFBE` | `#16A34A` | `zap` | `leaf` |
+| Bioeconomy (biomass) | Biomass | `#F3EFE8` | `#E3C9A8` | `#57534E` | `sprout` | `sprout` |
+
+Text on these backgrounds stays `--foreground`; the ink color is for icons. For a colored label on white, use a darker ink: blue `#1F5BAF`, green `#15803D`, bio `#57534E`.
+
+Use them for the primary pillar chip, secondary Nexus tags (outline version: white background, pillar border, dark ink text) or a 4px left bar on a row. Not as a full row fill.
+
+Other icons from the diagrams: `compass` (Climate Finance Navigator), `shield-check` (accountable contribution).
 
 ### Enabling and transitional activities
 
 The Compass marks activities with **E** (enabling) and **T** (transitional). Show them as small square badges: 1px `--foreground` border, `caption` text, transparent background, with a tooltip explaining the term.
+
+### Workflow step icons (Lucide)
+
+| Step | Icon |
+|---|---|
+| Project description | `file-input` |
+| Nexus classification | `network` |
+| Regulatory mapping | `scale` |
+| Evidence assessment | `clipboard-list` |
+| Finance matching | `landmark` |
+
+Use them in the progress indicator with the icon-badge style and dotted connectors between steps.
 
 ## 4. Spacing, radius, elevation
 
@@ -155,9 +175,9 @@ The Compass marks activities with **E** (enabling) and **T** (transitional). Sho
   --status-demo-bg: #F2E8F7;     --status-demo-border: #B48CC8;     --status-demo-fg: #5B2E73;
   --destructive: #B3261E;
 
-  --sector-energy: #F6E3D3;      --sector-energy-ink: #7A4A1E;
-  --sector-water: #DFEEF1;       --sector-water-ink: #1E6A70;
-  --sector-bioeconomy: #D3EDCB;  --sector-bioeconomy-ink: #2F6B2A;
+  --pillar-blue: #E8F0FA;  --pillar-blue-border: #A9C4E8;  --pillar-blue-icon: #2F6FC9;  --pillar-blue-ink: #1F5BAF;
+  --pillar-green: #E7F0EB; --pillar-green-border: #A8CFBE; --pillar-green-icon: #16A34A; --pillar-green-ink: #15803D;
+  --pillar-bio: #F3EFE8;   --pillar-bio-border: #E3C9A8;   --pillar-bio-icon: #57534E;   --pillar-bio-ink: #57534E;
 
   --radius: 2px;
 }

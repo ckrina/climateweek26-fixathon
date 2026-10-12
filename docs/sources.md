@@ -22,6 +22,10 @@ Every number or claim in the product or the pitch needs a source here. If it isn
 - [ ] **Biotech Act II (next year)**
 - [ ] **RED IV (end of year)**
 - [ ] **New EU water initiative**
+- [ ] **"The new Taxonomy is about to be released"**
+  - **Notes:** the Commission opened a call for feedback on revising the Taxonomy criteria on 17 March 2026 ([EU taxonomy page](https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en)). So a revision is under way, but the release date isn't confirmed.
+- [ ] **Cascading principle for biomass**
+  - **Notes:** find the EU source that defines it (Asher).
 
 ---
 
@@ -45,6 +49,16 @@ Every number or claim in the product or the pitch needs a source here. If it isn
   - **Notes:** the voluntary market standard most green bonds follow. Link to add.
 - IFC Guidelines for Blue Finance, Version 2.0
   - **Notes:** reference for the blue economy sector (water and ocean). Link to add.
+
+## Finance matching data sources
+
+APIs identified, not yet connected or tested. Links to add.
+
+- EU Funding & Tenders: EU funding calls, programmes, deadlines, historical calls. Official API.
+- Spain BDNS: Spanish grants, subsidies and published calls. Official API.
+- CORDIS: previously funded EU research and innovation projects. Official API.
+- World Bank Projects & Operations: historical financed development projects. Public dataset.
+- EIB, EIF, CDTI, ENISA, ACCIÓ: official websites; API availability not confirmed.
 
 ## Finance match (banks and programs)
 

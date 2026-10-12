@@ -1,5 +1,7 @@
 # Climate Finance Navigator
 
+**Water-Energy-Biomass Nexus**
+
 Norrsken Fixathon at Impact/Week, Barcelona, Oct 13-15 2026. 24-hour build.
 Challenge: "Fixing the Paris Agreement". Closest fit: Track 1 (turn climate needs into deployed solutions, faster).
 
@@ -12,15 +14,29 @@ Climate technologies often lose time not because money is missing, but because f
 - which financing routes are realistic at their stage,
 - who has financed similar projects.
 
-The answers are scattered across regulations, delegated acts, bank and bond frameworks, and funding portals. Finding and interpreting them is slow and expensive, especially for small teams. That friction slows deployment of technology that already exists, which is the Paris implementation gap.
+The answers are scattered across regulations, delegated acts, bank and bond frameworks, and funding portals. On top of that, there is no common classification of which projects are "green", "blue" or "bio": they are spread across different grants and bond programs. Finding and interpreting all this is slow and expensive, especially for small teams. That friction slows deployment of technology that already exists, which is the Paris implementation gap.
 
 ## What we're building
 
-A screening tool that tells a climate-tech startup, in minutes, whether its activity is likely eligible under the EU Taxonomy and which green finance and EU grants it could pursue next.
+A screening tool that tells a climate-tech startup, in minutes, which Nexus pillar its project belongs to, whether it's likely eligible under the EU Taxonomy, what evidence it still needs, and which green finance, programs and EU grants it could pursue next.
 
 Framing: not "another funding database", but a navigation layer between climate technology and deployable capital. It shortens the path from technology to a finance-ready project.
 
 It is navigation and pre-screening. It is not legal advice, investment advice or financing approval, and the product must say so. Formal alignment, external review, credit and investment decisions stay with lenders, investors and reviewers. That boundary is what keeps the tool credible.
+
+## Where we fit
+
+Paris Agreement → national climate plans (NDCs) → real projects and technologies → **Climate Finance Navigator** → investment and financing decision → deployment and operation → impact (carbon, water, biomass) → accountable contribution, which feeds back into better projects, policies and climate plans.
+
+**The key idea: we accelerate the middle of the chain.** We identify relevant activities, check evidence and rules, and find finance routes (comparable funded projects, relevant financiers, prioritised next actions). The financing decision stays independent, and real environmental results come from deploying and operating projects, not from a finance-readiness report.
+
+## The Nexus: three pillars
+
+1. **Blue Economy: water and aquatic systems.** Projects improving freshwater availability, quality and efficiency, wastewater management, aquatic ecosystems and sustainable ocean-related activities.
+2. **Green Economy: energy transition.** Projects generating low-carbon energy, reducing energy demand, improving energy infrastructure and storage, and decarbonising energy use.
+3. **Bioeconomy: sustainable biological resources.** Projects supplying and transforming biomass into food, feed, materials, chemicals and other products, prioritising higher-value circular uses before energy recovery from suitable residual streams (cascading principle).
+
+Each project gets one primary pillar, a project subtype, and secondary Nexus tags, because many projects are cross-sectoral. Classification rules: `/docs/nexus-classification.md` (Ekaterina, in progress).
 
 ## Users
 
@@ -31,16 +47,18 @@ It is navigation and pre-screening. It is not legal advice, investment advice or
 
 ## User flow
 
-1. **Onboarding:** 3 to 5 questions (sector, country, stage, plus what's needed to pick Taxonomy activities). See `/docs/onboarding-questions.md`.
-2. **Taxonomy filter:** map the startup to one or more Taxonomy activities from `/data/taxonomy/`. Show the substantial contribution criteria and the DNSH ("do no significant harm") criteria for each.
-3. **Finance match:** banks and programs offering green lending or climate finance, filtered by country and sector. Source: `/data/finance/`.
-4. **EU grants (secondary):** relevant EU funding calls. Source: `/data/grants/`.
-5. **Summary:** readiness level, funding options, next-steps roadmap, including the evidence the startup still needs to gather.
+1. **Project description:** 3 to 5 onboarding questions. See `/docs/onboarding-questions.md`.
+2. **Nexus classification:** primary pillar, project subtype, secondary tags.
+3. **Regulatory mapping:** exact EU Taxonomy activity from `/data/taxonomy/`, its environmental objective, and the criteria in force.
+4. **Evidence assessment:** technical screening criteria, DNSH ("do no significant harm"), minimum safeguards, and biomass cascading where it applies. Say what evidence is still missing.
+5. **Finance matching:** relevant instruments, financiers, programs and comparable funded projects, filtered by country and pillar. Based on Google search plus a few major sources with APIs (see Tech). EU grants as a secondary source. Data: `/data/finance/`, `/data/grants/`.
+
+Then a **summary screen:** readiness level, funding options, next-steps roadmap.
 
 ## Scope
 
-- **In:** three sectors only: bioeconomy/biomass, blue economy (water), energy transition. Opportunity screening only.
-- **Out:** due diligence, document preparation, application writing, any other sector.
+- **In:** the three Nexus pillars only. Opportunity screening only.
+- **Out:** due diligence, document preparation, application writing, anything outside the three pillars.
 
 ## Domain facts to get right
 
@@ -48,9 +66,10 @@ It is navigation and pre-screening. It is not legal advice, investment advice or
 - **Technology, project and issuer are different things.** A startup's technology can be the eligible activity itself, part of an eligible asset someone else finances, or an enabling technology supplied into another company's project. The flow should make clear which case applies.
 - **Eligible is not aligned.** Eligible means the activity is listed in the Taxonomy. Aligned means it meets the technical screening criteria for substantial contribution, does no significant harm to the other objectives, and meets minimum (social) safeguards. Our onboarding can't prove alignment, so the output is "likely eligible" plus "what you'll need to prove".
 - **Six objectives:** climate change mitigation, climate change adaptation, water and marine resources, circular economy, pollution prevention and control, biodiversity and ecosystems.
-- **Blue finance** is green finance for water and ocean objectives, with its own guidance (see `/docs/sources.md`). Relevant for the blue economy sector.
+- **Cascading principle (biomass):** biomass should go to its highest-value use first: food and feed, then materials, and energy only from residues, as a last resort. The current Taxonomy covers this only partially. For the hackathon we use the current Taxonomy, flag cascading as a check in the evidence step, and say in the pitch that a Taxonomy revision is under way and we plan to integrate the cascade.
+- **Blue finance** is green finance for water and ocean objectives, with its own guidance (see `/docs/sources.md`).
 - **Typical evidence lenders expect:** a baseline, measured or verified improvement (energy saved, emissions avoided, water reused, discharge quality), a measurement and monitoring plan, the project boundary and operating lifetime.
-- **EU Taxonomy Compass:** official tool showing activities, objectives and criteria, downloadable as Excel or JSON. It doesn't assess a specific company or show where the money is. That gap is our product.
+- **EU Taxonomy Compass:** official tool showing activities, objectives and criteria, downloadable as Excel or JSON. It doesn't classify a specific project or show where the money is. That gap is our product.
 
 ## Rules for Claude
 
@@ -71,7 +90,7 @@ It is navigation and pre-screening. It is not legal advice, investment advice or
 - A founder enters a project in under 5 minutes.
 - The tool returns at least one plausible route and explains why.
 - Every eligibility statement links to a source or is marked as inference.
-- Three test startups, one per sector, produce clearly different results.
+- Three test startups, one per pillar, produce clearly different results. The Bioeconomy one should trigger the cascading check.
 - The last screen tells the founder exactly what to do next.
 
 ## Claims to verify before the pitch

@@ -19,14 +19,51 @@ Check this before starting work. When a decision changes, don't delete it: mark 
 ## Open questions
 
 - Will startups do the first screening themselves, or keep paying a broker for the full service?
-- Which data source for the finance match: IBKR, SerpAPI, or curated mock data? (Rohan)
 - Is Lovable compatible with Rohan's design system?
 - What exactly goes into the 3 to 5 onboarding questions? (Ekaterina)
 - How do we calculate the "readiness level" on the summary screen?
+- Several finance sources are Spanish or Catalan (BDNS, CDTI, ENISA, ACCIÓ). Is the demo Spain-first, with EU sources on top?
+- APIs are identified but untested. Which one do we connect first on day 1, and which fall back to mock data?
+- Is there a database like the EU Taxonomy with technical criteria for bio-based projects? (Asher researching)
 
 ---
 
 ## Log
+
+### 2026-10-12 · Pillar definitions
+- **Decision:** Blue Economy (water and aquatic systems), Green Economy (energy transition), Bioeconomy (sustainable biological resources, cascading: higher-value uses before energy from residues). Cross-sectoral projects get secondary Nexus tags.
+- **Why:** settles the Bioeconomy scope: all bio-based projects, not only biomass for energy.
+- **Owner:** Ekaterina
+- **Status:** Proposed
+
+### 2026-10-12 · Finance matching sources
+- **Decision:** Google search plus EU Funding & Tenders, Spain BDNS, CORDIS and World Bank Projects. EIB, EIF, CDTI, ENISA, ACCIÓ and specialist funds via their websites. Mock data as fallback.
+- **Why:** official sources with APIs or public datasets; CORDIS and World Bank give comparable funded projects.
+- **Owner:** Ekaterina, Rohan
+- **Status:** Proposed
+
+### 2026-10-12 · Positioning: we accelerate the middle of the chain
+- **Decision:** pitch narrative from Paris Agreement and NDCs to projects, CFN, financing decision, deployment and accountable impact (carbon, water, biomass).
+- **Owner:** Ekaterina, Asher
+- **Status:** Proposed
+
+### 2026-10-12 · Water-Energy-Biomass Nexus
+- **Decision:** three pillars replace the three sectors: Blue Economy (water), Green Economy (energy), Bioeconomy (biomass). "Water-Energy-Biomass Nexus" as slogan.
+- **Why:** there's no common classification of green, blue and bio projects across grants and bonds; the Nexus gives one.
+- **Owner:** Ekaterina
+- **Status:** Proposed
+
+### 2026-10-12 · Five-step workflow
+- **Decision:** Project description → Nexus classification → Regulatory mapping → Evidence assessment → Finance matching, then the summary screen.
+- **Why:** Ekaterina's workflow (WhatsApp); adds classification and makes evidence its own step.
+- **Owner:** Ekaterina, Cristina
+- **Status:** Proposed
+
+### 2026-10-12 · Biomass: current Taxonomy now, cascade later
+- **Decision:** use the current Taxonomy for biomass, flag cascading as a check, and tell the jury the revised Taxonomy will let us integrate it.
+- **Why:** the current Taxonomy barely covers cascading and we have no alternative dataset yet.
+- **Owner:** Ekaterina, Asher
+- **Status:** Proposed
 
 ### 2026-10-12 · Finance match framed as green lending, not bond issuance
 - **Decision:** we match startups to green lending programs and instruments funded by green bonds, not to issuing bonds themselves.
@@ -70,7 +107,7 @@ Check this before starting work. When a decision changes, don't delete it: mark 
 ### 2026-10-12 · Three priority sectors
 - **Decision:** bioeconomy/biomass, blue economy (water), energy transition.
 - **Owner:** team
-- **Status:** Decided
+- **Status:** Decided, reframed as the Nexus pillars (see above)
 
 ### 2026-10-12 · Taxonomy criteria as a fixed database
 - **Decision:** Taxonomy data comes from the Compass Excel export, stored as static data in the repo.
