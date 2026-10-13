@@ -1,0 +1,20 @@
+[package]
+name = "climate-finance-navigator-backend"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+worker = "=0.8.7"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+# Keep the symbol metadata wasm-bindgen needs for its externref table.
+# https://github.com/cloudflare/workers-rs/issues/1014
+strip = "debuginfo"

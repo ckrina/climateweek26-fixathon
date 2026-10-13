@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "climate-finance-navigator-backend",
+  "main": "build/index.js",
+  "compatibility_date": "2026-10-13",
+  "workers_dev": true,
+  "build": {
+    "command": "cargo install --locked --version 0.8.7 worker-build && worker-build --release --locked",
+    "watch_dir": ["src", "Cargo.toml", "Cargo.lock"]
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+}

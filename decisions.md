@@ -30,6 +30,12 @@ Check this before starting work. When a decision changes, don't delete it: mark 
 
 ## Log
 
+### 2026-10-13 · Rust backend on Cloudflare Workers
+- **Decision:** use a Rust Worker in `/backend`, compiled to `wasm32-unknown-unknown` with `workers-rs` and `worker-build`. GitHub Actions validates backend pull requests and deploys successful `main` builds with Wrangler.
+- **Why:** provides a deployable Rust API backend alongside the Cloudflare-hosted frontend, with pinned dependencies and a health endpoint.
+- **Owner:** Rohan
+- **Status:** Decided
+
 ### 2026-10-12 · Pillar definitions
 - **Decision:** Blue Economy (water and aquatic systems), Green Economy (energy transition), Bioeconomy (sustainable biological resources, cascading: higher-value uses before energy from residues). Cross-sectoral projects get secondary Nexus tags.
 - **Why:** settles the Bioeconomy scope: all bio-based projects, not only biomass for energy.
